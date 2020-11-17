@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PORTFOLIO_ABOUT</title>
+	<link href="css/about.css" rel="stylesheet" type="text/css">
+    <!--<link rel="icon" href="img/">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<a class="menu-trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+			<nav>
+				<a href="about.html"> ABOUT </a>
+				<a href="project.html"> PROJECT </a>
+				<a href="contact.html"> CONTACT </a>
+			</nav>
+		</div>
+		<div class="logo">
+			<a href="index.html"><img src="img/mlogo.png"alt=""></a>
+		</div>
+	</header>
+	<div class="left">
+		<p>ABOUT</p>
+	</div>
+	
+	<!-- ================================ -->
+	<script>
+        const menu = document.querySelector('.menu-trigger');
+        const nav = document.querySelector('nav');
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            nav.classList.toggle('active');
+        })
+	</script>
+
+	<!-- =============================== -->
+
+	<div class="about">
+		<div class="me">
+			<img src="img/about.jpg" alt="">
+			<article>
+				<h2>신 연 우</h2>
+				<p>Shin Yeon Woo
+					1996.06.29<br><br>
+					dusdn1401@naver.com
+					010 . 2223 . 0629
+				</p>
+			</article>
+		</div>
+		<div class="info">
+			<div class="edu">
+				<article>
+					<h3>Education</h3>
+					<p>- 그린 컴퓨터 아카데미 웹 퍼브리셔 & 프론트엔드 개발자 양성과정 수료
+						- 단국대학교 독일어과 졸업
+					</p>
+				</article>
+			</div>
+			<div class="skill">
+				<h3>Skills</h3>
+				<div>
+					<h4>HTML</h4>
+					<div class="container">
+						<div class="skills">80%</div>
+					</div>
+					<p>간결하고 깔끔한 Markup / 웹표준 및 웹 접근성 준수</p>
+				</div>
+				<div>
+					<h4>CSS</h4>
+					<div class="container">
+						<div class="skills">75%</div>
+					</div>
+					<p>반응형 웹 제작 / SASS이용한 Style 적용가능</p>
+				</div>
+				<div>
+					<h4>JS/Jquery</h4>
+					<div class="container">
+						<div class="skills">70%</div>
+					</div>
+					<p>JavaScript 기본 문법이해
+						Jquery를 사용하여 기능구형, 다양한 플러그인 활용
+					</p>
+				</div>
+				<div>
+					<h4>PHOTOSHOP</h4>
+					<div class="container">
+						<div class="skills">85%</div>
+					</div>
+					<p>이미지 편집 및 보정, 제작가능</p>
+				</div>
+			</div>
+
+			
+		</div>
+
+	</div>
+	<script>
+		$(function(){
+			$('.container').each(function(i){
+				var skill = $(this).find('.skills');
+				var percent = skill.text(); 
+				skill.delay(i*500).animate({'width':percent});
+			});
+		});
+	</script>
+	
+</body>
+</html>

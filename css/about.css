@@ -1,0 +1,221 @@
+@import url(common.css);
+/*=======================================*/
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu {
+  z-index: 100;
+}
+
+.menu .menu-trigger {
+  width: 25px;
+  height: 16px;
+  position: fixed;
+  top: 58px;
+  left: 10vw;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu .menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.menu .menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu .menu-trigger span:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu .menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu .menu-trigger.active span:nth-of-type(1) {
+  top: 45%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.menu .menu-trigger.active span:nth-of-type(2) {
+  display: none;
+}
+
+.menu .menu-trigger.active span:nth-of-type(3) {
+  bottom: 45%;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.menu .menu-trigger.active span {
+  background: #ed354c;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu nav {
+  margin: 0 auto;
+  width: 70%;
+  height: 80vh;
+  top: 12%;
+  left: 20%;
+  position: fixed;
+  display: none;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background: #262626;
+  -webkit-box-shadow: 10px 0px 0px 0px;
+          box-shadow: 10px 0px 0px 0px;
+  z-index: 10;
+}
+
+.menu nav a {
+  color: white;
+  font-size: 150px;
+  display: block;
+}
+
+.menu nav a:hover {
+  color: #ed354c;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.menu nav.active {
+  display: block;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.logo {
+  width: 200px;
+  margin: 50px auto;
+}
+
+.logo a img {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left {
+  position: absolute;
+  top: 200px;
+  left: 10vw;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: rotate(-90deg) translate(-80%, -50%);
+          transform: rotate(-90deg) translate(-80%, -50%);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.left p {
+  font-size: 30px;
+  width: 500px;
+}
+
+.left p:after {
+  width: 70%;
+  height: 1px;
+  content: '';
+  clear: both;
+  background: white;
+  opacity: 0.2;
+  display: inline-block;
+  margin: 0 0 10px 10px;
+}
+
+.about {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.about .me {
+  float: left;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 30px;
+}
+
+.about .me img {
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+}
+
+.about .me h2 {
+  font-size: 30px;
+}
+
+.about .me p {
+  font-size: 20px;
+}
+
+.about .info {
+  float: right;
+}
+
+.about .info .edu {
+  white-space: pre-line;
+}
+
+.about .info .edu h3 {
+  font-size: 25px;
+}
+
+.about .info .edu p {
+  font-size: 20px;
+}
+
+.about .info .skill h3 {
+  font-size: 25px;
+}
+
+.about .info .skill > div {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.about .info .skill > div h4 {
+  font-size: 20px;
+  position: absolute;
+}
+
+.about .info .skill > div p {
+  font-size: 16px;
+  white-space: pre-line;
+  text-align: right;
+}
+
+.about .info .skill .container {
+  width: 80%;
+  text-align: right;
+  height: 20px;
+  background-color: #ddd;
+  margin: 5px 0 5px 23%;
+}
+
+.about .info .skill .skills {
+  text-align: right;
+  color: white;
+  width: 0%;
+  height: 20px;
+  background: #ed354c;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+/*# sourceMappingURL=about.css.map */

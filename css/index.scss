@@ -1,0 +1,158 @@
+@import url(common.css);
+
+body{height: 100vh;}
+.main {
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+.scroll{
+    height: 80vh; 
+    overflow: hidden;
+    .logo {
+        width: 60%;
+        height: 150px;
+        margin: 100px auto;
+        transform: translate3d(0px, 10px);
+        position: fixed;
+        left: 20%;
+        a {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .img {
+        width: 600px;
+        height: 400px;
+        margin: 0 auto 80px;
+    position: absolute;
+    left: 34%;
+        top:35%;
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+    }
+}
+.round {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        font-size: 80px;
+        color: white;
+    }
+
+    a:hover {
+        color: #ed354c;
+        transition: 1s;
+    }
+
+    p {
+        font-size: 30px;
+        opacity: 0;
+        color: #ed354c;
+        position: absolute;
+        left: 110%;
+        bottom: 20px;
+    }
+
+    div:hover p {
+        opacity: 1;
+        color: #ed354c;
+        transition: .5s;
+    }
+
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .r1 {
+        span {
+            width: 5px;
+            height: 200px;
+            content: '';
+            clear: both;
+            display: block;
+            background: white;
+            margin: 0 auto;
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    .r2 {
+        span {
+            width: 5px;
+            height: 500px;
+            content: '';
+            clear: both;
+            display: block;
+            background: white;
+            margin: 0 auto;
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    .r3 {
+        span {
+            width: 5px;
+            height: 300px;
+            content: '';
+            clear: both;
+            display: block;
+            background: white;
+            margin: 0 auto;
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    .swing {
+        margin: 0 auto;
+        animation: swing ease-in-out 2s infinite alternate;
+        transform-origin: center -20px;
+    }
+
+
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+// =========================================
+@media (max-width: 1080px){
+
+}
+@media (max-width: 768px){
+   
+}
+@media (max-width: 480px){
+   
+}
+

@@ -1,0 +1,229 @@
+@import url(common.css);
+
+/*=======================================*/
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu {
+    z-index: 100;
+
+    .menu-trigger {
+        width: 25px;
+        height: 16px;
+        position: fixed;
+        top: 58px;
+        left: 10vw;
+        transition: .5s;
+
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+        }
+
+        span:nth-of-type(1) {
+            top: 0;
+        }
+
+        span:nth-of-type(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        span:nth-of-type(3) {
+            bottom: 0;
+        }
+    }
+
+    .menu-trigger.active span:nth-of-type(1) {
+        top: 45%;
+        transform: rotate(40deg);
+    }
+
+    .menu-trigger.active span:nth-of-type(2) {
+        display: none;
+    }
+
+    .menu-trigger.active span:nth-of-type(3) {
+        bottom: 45%;
+        transform: rotate(-40deg);
+    }
+
+    .menu-trigger.active span {
+        background: #ed354c;
+        transition: .5s;
+    }
+
+
+    nav {
+        margin: 0 auto;
+        width: 70%;
+        height: 80vh;
+        top: 12%;
+        left: 20%;
+        position: fixed;
+        display: none;
+        transition: 2s;
+        background: #262626;
+        box-shadow: 10px 0px 0px 0px;
+        z-index: 10;
+
+        a {
+            color: white;
+            font-size: 150px;
+            display: block;
+        }
+
+        a:hover {
+            color: #ed354c;
+            transition: 1.2s;
+        }
+    }
+
+    nav.active {
+        display: block;
+        transition: 2s;
+    }
+}
+
+.logo {
+    width: 200px;
+    margin: 50px auto;
+
+    a {
+        img {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+.left {
+    position: absolute;
+    top: 200px;
+    left: 10vw;
+    transition: .5s;
+    transform: rotate(-90deg) translate(-80%, -50%);
+    transform-origin: 0% 0%;
+
+    p {
+        font-size: 30px;
+        width: 500px;
+    }
+
+    p:after {
+        width: 70%;
+        height: 1px;
+        content: '';
+        clear: both;
+        background: white;
+        opacity: 0.2;
+        display: inline-block;
+        margin: 0 0 10px 10px;
+    }
+}
+
+
+// ===================================
+
+.about {
+    width: 55%;
+    margin: 0 auto;
+
+    .me {
+        float: left;
+        text-align: center;
+        white-space: pre-line;
+        line-height: 30px;
+
+        img {
+            width: 300px;
+            height: 300px;
+            opacity: 0.2;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px
+        }
+    }
+
+    .info {
+        float: right;
+
+        .edu {
+            white-space: pre-line;
+
+            h3 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .skill {
+            h3 {
+                font-size: 25px;
+            }
+
+            > div {
+                width: 100%;
+                margin-top: 40px;
+                margin-left: 30px;
+
+                h4 {
+                    font-size: 20px;
+                    position: absolute;
+                }
+
+                p {
+                    font-size: 16px;
+                    white-space: pre-line;
+                    text-align: right;
+                }
+            }
+
+            .container {
+                width: 80%;
+                text-align: right;
+                height: 20px;
+                background-color: #ddd;
+                margin: 5px 0 5px 23%;
+            }
+
+            .skills {
+                text-align: right;
+                //padding-top: 10px;
+                //padding-bottom: 10px;
+                color: white;
+                width: 0%;
+                height: 20px;
+                background: #ed354c;
+                transition: 1.5s;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1080px){
+
+ }
+ @media (max-width: 768px){
+    
+}
+@media (max-width: 480px){
+    
+}

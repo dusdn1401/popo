@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO_YEONWOO</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!--<link rel="icon" href="img/">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="scroll">
+            <div class="logo">
+                <a href="index.html"><img src="img/mlogo.png"></a>
+            </div>
+            <div class="img">
+                <img src="img/mimg.JPG">
+            </div>
+        </div>
+        <div class="round">
+            <div class="r1 swing">
+                <img src="img/mround.png">
+                <span></span>
+                <div><a href="about.html">A</a>
+                    <p>bout</p>
+                </div>
+
+            </div>
+            <div class="r2 swing">
+                <img src="img/mround.png">
+                <span></span>
+                <div><a href="contact.html">C</a>
+                    <p>ontact</p>
+                </div>
+            </div>
+            <div class="r3 swing">
+                <img src="img/mround.png">
+                <span></span>
+                <div><a href="project.html">P</a>
+                    <p>roject</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+     <script>
+        $(function() {
+            var mLogo = document.querySelector('.logo')
+            var mImg = document.querySelector(".img");
+            var mScroll = document.querySelector(".scroll");
+            var mRound = document.querySelector(".round");
+            $(window).scroll(function(){
+
+                var scroll = $(this).scrollTop();
+               var pinkScroll = scroll/2
+               var yellowScroll = scroll*1
+
+               console.log(pinkScroll);
+               //console.log(pinkScroll);
+               
+               $('.logo').css({'transform' : 'translate3d(0,'+ pinkScroll +'px,0)'})
+            //    $('.logo').css({'width' : pinkScroll +'px'})
+               $('.img').css({'height' : '-' + yellowScroll +'px'})
+
+            //====================================
+                // var po =  window.pageYOffset;
+                // var value = window.pageYOffset / mImg.offsetTop+1;
+
+        
+                // // mImg.style.transform = `scale(${value})`;
+
+                // mLogo.style.width = `${value}`;
+
+                // //  mLogo.style.transform = 'scale(0.3)';
+                // if(value > 2 ){
+                //     mLogo.style.top = `-10%`;
+                // }else{
+                //     mLogo.style.top = `0%`;
+                // }
+                
+
+            });
+
+        })
+
+
+    </script> 
+</body></html>

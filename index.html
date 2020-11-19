@@ -7,6 +7,7 @@
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <!--<link rel="icon" href="img/">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
 
 
 </head>
@@ -50,22 +51,22 @@
        
      <script>
         $(function() {
-            var mLogo = document.querySelector('.logo')
-            var mImg = document.querySelector(".img");
-            var mScroll = document.querySelector(".scroll");
-            var mRound = document.querySelector(".round");
-            $(window).scroll(function(){
+            // var mLogo = document.querySelector('.logo')
+            // var mImg = document.querySelector(".img");
+            // var mScroll = document.querySelector(".scroll");
+            // var mRound = document.querySelector(".round");
+            // $(window).scroll(function(){
 
-                var scroll = $(this).scrollTop();
-               var pinkScroll = scroll/2
-               var yellowScroll = scroll*1
+            //     var scroll = $(this).scrollTop();
+            //    var pinkScroll = scroll/2
+            //    var yellowScroll = scroll*1
 
-               console.log(pinkScroll);
-               //console.log(pinkScroll);
+            //    console.log(pinkScroll);
+            //    //console.log(pinkScroll);
                
-               $('.logo').css({'transform' : 'translate3d(0,'+ pinkScroll +'px,0)'})
-            //    $('.logo').css({'width' : pinkScroll +'px'})
-               $('.img').css({'height' : '-' + yellowScroll +'px'})
+            //    $('.logo').css({'transform' : 'translate3d(0,'+ pinkScroll +'px,0)'})
+            // //    $('.logo').css({'width' : pinkScroll +'px'})
+            //    $('.img').css({'height' : '-' + yellowScroll +'px'})
 
             //====================================
                 // var po =  window.pageYOffset;

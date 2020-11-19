@@ -1,8 +1,7 @@
 @import url(common.css);
 /*=======================================*/
-html, body {
-  width: 100%;
-  height: 100%;
+html,
+body {
   position: relative;
 }
 
@@ -18,7 +17,6 @@ html, body {
   left: 10vw;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 500;
 }
 
 .menu .menu-trigger span {
@@ -66,47 +64,40 @@ html, body {
 }
 
 .menu nav {
-  width: 100%;
-  height: 100%;
-  background: #333;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0px auto;
-  padding: 15px 0;
+  width: 70%;
+  height: 110vh;
+  position: absolute;
+  left: 15%;
+  top: -34.5%;
+  margin: 0 auto;
   display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  z-index: 100;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background: #262626;
+  z-index: 10;
+}
+
+.menu nav .navLogo {
+  width: 200px;
+  margin: 50px auto 0;
+}
+
+.menu nav .navLogo a {
+  -webkit-box-shadow: 0px 0px 0px 0px;
+          box-shadow: 0px 0px 0px 0px;
+}
+
+.menu nav .navLogo a img {
+  width: 100%;
 }
 
 .menu nav a {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   color: white;
-  text-decoration: none !important;
-  font-size: 80px;
-  margin: 100px auto;
-}
-
-.menu nav a img {
-  width: 200px;
-  margin: 0 auto;
-}
-
-.menu nav a:nth-of-type(1) {
-  margin: 35px 0;
+  font-size: 10em;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 10px 0px 0px 0px;
+          box-shadow: 10px 0px 0px 0px;
 }
 
 .menu nav a:hover {
@@ -119,21 +110,6 @@ html, body {
   display: block;
   -webkit-transition: 2s;
   transition: 2s;
-  position: fixed;
-  right: 100%;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  border-radius: 50px;
-  border: 10px solid #d1c0a5;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: .5s;
-  transition: .5s;
-  text-align: center;
 }
 
 .logo {
@@ -222,19 +198,18 @@ html, body {
 }
 
 .pop {
-  width: 55%;
-  height: 65%;
+  width: 58%;
+  height: 70%;
   z-index: 50;
   position: fixed;
   top: 18.2%;
-  left: 22.7%;
+  left: 22.8%;
   display: none;
   background: #d1c0a5;
   -webkit-transition: 2s;
   transition: 2s;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
-  border: 20px solid #333;
 }
 
 .pop h3 {
@@ -302,11 +277,8 @@ html, body {
   margin: 0 auto;
 }
 
-.main .fade .mcon {
-  position: absolute;
-}
-
 .main .fade .mcon a {
+  position: absolute;
   left: 0%;
   top: 0;
 }
@@ -317,6 +289,7 @@ html, body {
 }
 
 .main .fade .mcon p {
+  position: absolute;
   right: 4%;
   top: 20px;
   text-align: left;
@@ -338,9 +311,13 @@ html, body {
   text-align: right;
 }
 
+.main .fade.active {
+  opacity: 0;
+}
+
 .right {
   position: fixed;
-  top: 200px;
+  top: 50%;
   right: 10vw;
   -webkit-transition: .5s;
   transition: .5s;
@@ -356,7 +333,7 @@ html, body {
   width: 50px;
   height: 50px;
   position: fixed;
-  top: 180px;
+  top: 45%;
   right: 10%;
   -webkit-transition: .5s;
   transition: .5s;
@@ -376,7 +353,7 @@ html, body {
   color: #ed354c;
   position: absolute;
   right: 700%;
-  top: -70%;
+  top: -45%;
   width: 100%;
   display: none;
   font-size: 18px;
@@ -420,145 +397,4 @@ html, body {
   top: 290px;
   font-size: 20px;
 }
-
-@media (max-width: 1080px) {
-  .menu nav.active {
-    width: 100%;
-  }
-  .main {
-    width: 55%;
-    height: 600px;
-    margin: 100px auto 0px;
-    border: 20px solid #333;
-  }
-  .main .fade {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .main .fade .mcon a {
-    position: absolute;
-    left: 0%;
-    top: 0;
-  }
-  .main .fade .mcon a img {
-    width: 100%;
-    height: 250px;
-  }
-  .main .fade .mcon p {
-    position: absolute;
-    right: 4%;
-    top: 50%;
-    text-align: left;
-  }
-  .main .fade .mtext {
-    position: absolute;
-    bottom: 4%;
-    right: 0;
-  }
-  .main .fade .mtext a {
-    color: white;
-    line-height: 120px;
-  }
-  .main .fade .mtext a h2 {
-    font-size: 5em;
-    text-align: right;
-    line-height: 70px;
-  }
-  .pop {
-    width: 54%;
-    height: 600px;
-    z-index: 50;
-    position: fixed;
-    top: 17%;
-    left: 23%;
-    display: none;
-    background: #d1c0a5;
-    -webkit-transition: 2s;
-    transition: 2s;
-    -webkit-transition-delay: .3s;
-            transition-delay: .3s;
-  }
-  .pop h3 {
-    font-size: 40px;
-    text-align: center;
-    margin: 50px;
-    color: black;
-  }
-  .pop .list a {
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    display: -ms-inline-grid;
-    display: inline-grid;
-  }
-  .pop .list a img {
-    width: 200px;
-    height: 100px;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  .pop .list a:hover {
-    color: #ed354c;
-    -webkit-transition: 1.2s;
-    transition: 1.2s;
-  }
-  .pop .list a:hover img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-}
-
-@media (max-width: 768px) {
-  .main .fade .mcon a img {
-    height: 230px;
-  }
-  .main .fade .mcon p {
-    font-size: 12px;
-    right: 4%;
-    top: 55%;
-    text-align: left;
-  }
-  .main .fade .mtext {
-    position: absolute;
-    bottom: 2%;
-    right: 0%;
-  }
-  .main .fade .mtext a {
-    color: white;
-    line-height: 120px;
-  }
-  .main .fade .mtext a h2 {
-    font-size: 4em;
-    text-align: right;
-    line-height: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main .fade .mcon a img {
-    height: 200px;
-  }
-  .main .fade .mcon p {
-    font-size: 12px;
-  }
-  .main .fade .mtext {
-    position: absolute;
-    bottom: 2%;
-    right: 0%;
-  }
-  .main .fade .mtext a {
-    color: white;
-    line-height: 120px;
-  }
-  .main .fade .mtext a h2 {
-    font-size: 3em;
-    text-align: right;
-    line-height: 50px;
-  }
-}
-/*# sourceMappingURL=project.css.map */
+/*# sourceMappingURL=pproject.css.map */

@@ -5,8 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DETAIL1</title>
 	<link href="css/detail.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/project.js"></script>
 </head>
 <body>
 	<header>
@@ -16,7 +19,8 @@
 				<span></span>
 				<span></span>
 			</a>
-			<nav>
+			<nav id="slide-menu">
+				<a href="index.html"><img src="img/mlogo.png"></a>
 				<a href="about.html"> ABOUT </a>
 				<a href="project.html"> PROJECT </a>
 				<a href="contact.html"> CONTACT </a>
@@ -44,22 +48,6 @@
 		</div>
 	</div>	
 		<!-- ================================ -->
-		<script>
-			const menu = document.querySelector('.menu-trigger');
-			const nav = document.querySelector('nav');
-			menu.addEventListener('click', function() {
-				menu.classList.toggle('active');
-				nav.classList.toggle('active');
-			})
-
-			var square = document.querySelector('.square');
-		var pop = document.querySelector('.pop');
-		square.addEventListener('click', function(){
-			square.classList.toggle('active');
-			pop.classList.toggle('active');
-		})
-		</script>
-	
 		<!-- =============================== -->
 	<div class="detail">
 		<div class="d1">
@@ -134,26 +122,6 @@
 			<img src="img/d2_5.jpg" alt="">
 			<img src="img/d2_6.jpg" alt="">
 		</div>
-
-
 	</div>
-	<script>
-		 var liEle = document.querySelectorAll('.main .c2 figure');
-		 var winH = window.innerHeight;
-        window.addEventListener('scroll', fadeFun);
-        function fadeFun() {
-            liEle.forEach(function(el, idx) {
-                if (el.offsetTop - winH < this.scrollY) {
-                    el.classList.add('active');
-                } else {
-                    el.classList.remove('active');
-                }
-            });
-		}
-		
-		
-	</script>
-
-
 </body>
 </html>

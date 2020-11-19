@@ -4,7 +4,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .menu {
@@ -19,6 +19,7 @@ body {
   left: 10vw;
   -webkit-transition: .5s;
   transition: .5s;
+  z-index: 500;
 }
 
 .menu .menu-trigger span {
@@ -66,31 +67,80 @@ body {
 }
 
 .menu nav {
-  margin: 0 auto;
-  width: 70%;
-  height: 80vh;
-  top: 12%;
-  left: 20%;
-  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px auto;
+  padding: 15px 0;
   display: none;
-  -webkit-transition: 2s;
-  transition: 2s;
-  background: #262626;
-  -webkit-box-shadow: 10px 0px 0px 0px;
-          box-shadow: 10px 0px 0px 0px;
-  z-index: 10;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 100;
 }
 
 .menu nav a {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   color: white;
-  font-size: 150px;
-  display: block;
+  text-decoration: none !important;
+  font-size: 80px;
+  margin: 100px auto;
+}
+
+.menu nav a img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.menu nav a:nth-of-type(1) {
+  margin: 35px auto;
 }
 
 .menu nav a:hover {
   color: #ed354c;
   -webkit-transition: 1.2s;
   transition: 1.2s;
+}
+
+.menu nav a:before {
+  position: absolute;
+  color: #FFF;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  overflow: hidden;
+  content: attr(alt);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+}
+
+.menu nav a:hover:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.menu nav a:before {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .menu nav.active {
@@ -111,9 +161,9 @@ body {
 }
 
 .left {
-  position: absolute;
-  top: 200px;
-  left: 10vw;
+  position: fixed;
+  top: 250px;
+  left: 10.5vw;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: rotate(-90deg) translate(-80%, -50%);
@@ -141,17 +191,21 @@ body {
 .about {
   width: 55%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .about .me {
-  float: left;
+  width: 40%;
   text-align: center;
   white-space: pre-line;
   line-height: 30px;
+  margin-right: 100px;
 }
 
 .about .me img {
-  width: 300px;
+  width: 100%;
   height: 300px;
   opacity: 0.2;
 }
@@ -161,15 +215,20 @@ body {
 }
 
 .about .me p {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.about .me p :nth-of-type(1) {
+  padding-bottom: 50px;
 }
 
 .about .info {
-  float: right;
+  width: 60%;
 }
 
 .about .info .edu {
   white-space: pre-line;
+  padding-bottom: 50px;
 }
 
 .about .info .edu h3 {
@@ -177,7 +236,7 @@ body {
 }
 
 .about .info .edu p {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .about .info .skill h3 {
@@ -187,26 +246,24 @@ body {
 .about .info .skill > div {
   width: 100%;
   margin-top: 40px;
-  margin-left: 30px;
 }
 
-.about .info .skill > div h4 {
-  font-size: 20px;
+.about .info .skill > div p:nth-of-type(1) {
   position: absolute;
 }
 
-.about .info .skill > div p {
-  font-size: 16px;
+.about .info .skill > div p:nth-of-type(2) {
+  font-size: 15px;
   white-space: pre-line;
   text-align: right;
 }
 
 .about .info .skill .container {
-  width: 80%;
+  width: 70%;
   text-align: right;
   height: 20px;
   background-color: #ddd;
-  margin: 5px 0 5px 23%;
+  margin: 5px 0 5px 30%;
 }
 
 .about .info .skill .skills {
@@ -217,5 +274,59 @@ body {
   background: #ed354c;
   -webkit-transition: 1.5s;
   transition: 1.5s;
+}
+
+@media (max-width: 1080px) {
+  .menu nav.active {
+    width: 100%;
+  }
+  .about {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto 150px;
+  }
+  .about .me {
+    float: none;
+    width: 100%;
+  }
+  .about .info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .info .skill > div h4 {
+    position: inherit;
+  }
+  .about .info .skill > div .container {
+    display: inline;
+    padding-top: 20px;
+  }
+  .about .info .skill > div p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .info .edu h3 {
+    font-size: 23px;
+  }
+  .about .info .edu p {
+    font-size: 15px;
+  }
+  .about .info .skill h3 {
+    font-size: 23px;
+  }
+  .about .info .skill > div {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
+  .about .info .skill > div h4 {
+    font-size: 18px;
+  }
+  .about .info .skill > div p {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=about.css.map */

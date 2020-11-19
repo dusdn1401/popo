@@ -5,7 +5,8 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    
 }
 
 .menu {
@@ -18,6 +19,7 @@ body {
         top: 58px;
         left: 10vw;
         transition: .5s;
+        z-index: 500;
 
         span {
             position: absolute;
@@ -62,33 +64,79 @@ body {
 
 
     nav {
-        margin: 0 auto;
-        width: 70%;
-        height: 80vh;
-        top: 12%;
-        left: 20%;
-        position: fixed;
-        display: none;
-        transition: 2s;
-        background: #262626;
-        box-shadow: 10px 0px 0px 0px;
-        z-index: 10;
+        width: 100%;
+        height: 100%;
+            background: #333;
+            align-items: center;
+            margin: 0px auto;
+            padding: 15px 0;
+            display: none;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            z-index: 100;
 
-        a {
+            // position: fixed;
+            // right: 100%;
+            // top: 0;
+            // height: 100%;
+            // width: 50%;
+            // border-radius: 50px;
+            // border: 10px solid #d1c0a5;
+            // // background: rgba(209, 192, 165,1);
+            // align-items: center;
+            // transform: translateX(100%);
+            // transition: .5s;
+            // text-align: center;
+        a {position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             color: white;
-            font-size: 150px;
-            display: block;
+            text-decoration: none !important;
+            font-size: 80px;
+            margin: 100px auto;
+            img{width: 200px; margin: 0 auto;}
+
         }
+        a:nth-of-type(1){margin:35px auto;}
 
         a:hover {
             color: #ed354c;
             transition: 1.2s;
         }
+
+        a:before{
+        position: absolute;
+        color: #FFF;
+        top: 0px;
+        left: 0px;
+        padding: 10px;
+        overflow: hidden;
+        content: attr(alt);
+        transition: all 0.3s;
+        transform: scale(0.8);
+        opacity: 0;} 
+    
+        a:hover:before{
+            transform: scale(1);
+            opacity: 1;}
+    
+        a:before{
+            transform: scale(1.2);
+        } 
     }
+    // =========================
+  
+
+    // =========================
+
 
     nav.active {
         display: block;
         transition: 2s;
+       
     }
 }
 
@@ -106,9 +154,9 @@ body {
 }
 
 .left {
-    position: absolute;
-    top: 200px;
-    left: 10vw;
+    position: fixed;
+    top: 250px;
+    left: 10.5vw;
     transition: .5s;
     transform: rotate(-90deg) translate(-80%, -50%);
     transform-origin: 0% 0%;
@@ -136,15 +184,16 @@ body {
 .about {
     width: 55%;
     margin: 0 auto;
-
+    display: flex;
     .me {
-        float: left;
+        width: 40%;
         text-align: center;
         white-space: pre-line;
         line-height: 30px;
+        margin-right: 100px;
 
         img {
-            width: 300px;
+            width: 100%;
             height: 300px;
             opacity: 0.2;
         }
@@ -154,26 +203,29 @@ body {
         }
 
         p {
-            font-size: 20px
+            font-size: 18px;
         }
+        p :nth-of-type(1){padding-bottom: 50px;}
     }
 
     .info {
-        float: right;
+        width: 60%;
 
         .edu {
             white-space: pre-line;
+            padding-bottom: 50px;
 
             h3 {
                 font-size: 25px;
             }
 
             p {
-                font-size: 20px;
+                font-size: 15px;
             }
         }
 
         .skill {
+
             h3 {
                 font-size: 25px;
             }
@@ -181,32 +233,25 @@ body {
             > div {
                 width: 100%;
                 margin-top: 40px;
-                margin-left: 30px;
-
-                h4 {
-                    font-size: 20px;
-                    position: absolute;
-                }
-
-                p {
-                    font-size: 16px;
+                p:nth-of-type(1){position: absolute;}
+                p:nth-of-type(2) {
+                    font-size: 15px;
                     white-space: pre-line;
                     text-align: right;
                 }
             }
 
             .container {
-                width: 80%;
+                width: 70%;
+                
                 text-align: right;
                 height: 20px;
                 background-color: #ddd;
-                margin: 5px 0 5px 23%;
+                margin: 5px 0 5px 30%;
             }
 
             .skills {
                 text-align: right;
-                //padding-top: 10px;
-                //padding-bottom: 10px;
                 color: white;
                 width: 0%;
                 height: 20px;
@@ -219,11 +264,61 @@ body {
 }
 
 @media (max-width: 1080px){
+    .menu{
+        nav.active{width:100%;}
+    }
+    
+    .about{
+        flex-wrap: wrap;
+        margin: 0 auto 150px;
+        .me{float: none; width: 100%;} 
+        .info{width: 100%;}
+    }
 
  }
  @media (max-width: 768px){
-    
+    .about{
+        .info{
+            .skill{
+                > div {
+                    h4{position: inherit;}
+                    .container{display: inline;
+                        padding-top: 20px;}
+                        p{text-align: left;}
+                }
+            }
+        }
+    }
 }
 @media (max-width: 480px){
+    .about{
+        .info{
+            .edu {
+                h3 {
+                    font-size: 23px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            .skill{
+                h3 {
+                    font-size: 23px;
+                }
+                > div {
+                    width: 100%;
+                    margin-top: 40px;
+                    margin-left: 0px;
     
+                    h4 {
+                        font-size: 18px;
+                    }
+    
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
 }

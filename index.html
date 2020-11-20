@@ -4,91 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO_YEONWOO</title>
+
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <!--<link rel="icon" href="img/">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/common.js"></script>
-
-
 </head>
 
 <body>
     <div class="main">
         <div class="scroll">
-            <div class="logo">
-                <a href="index.html"><img src="img/mlogo.png"></a>
-            </div>
-            <div class="img">
-                <img src="img/mimg.JPG">
-            </div>
-        </div>
-        <div class="round">
-            <div class="r1 swing">
-                <img src="img/mround.png">
-                <span></span>
-                <div><a href="about.html">A</a>
-                    <p>bout</p>
+            <div class="all">
+                <header>
+                    <h1>PORTFOLIO</h1>
+                    <div class="mouse"><p>scroll</p> </div>
+                </header>
+
+                <section class="content">
+                    <div class="con">
+                       <div class="ctext">
+                        <h3>안녕하세요.<br> 웹 퍼블리셔 <br>신연우 입니다.</h3>
+                           <a href=about.html>알아보기--></a>                        
+                           </div>
+                        
+
+                        <img src="img/about.jpg">
+                    </div>
+                </section>
+
+                <div class="menu">
+                    <div class="icon-menu">
+                        <div class="icon"></div>
+                    </div>
+                    <span class="hidden"><a href="index.html">Home </a></span>
+                    <span class="hidden"><a href="about.html">ABOUT</a></span>
+                    <span class="hidden"><a href="project.html">PROJECT</a></span>
+                    <span class="hidden"><a href="contact.html">CONTACT</a></span>
                 </div>
 
-            </div>
-            <div class="r2 swing">
-                <img src="img/mround.png">
-                <span></span>
-                <div><a href="contact.html">C</a>
-                    <p>ontact</p>
-                </div>
-            </div>
-            <div class="r3 swing">
-                <img src="img/mround.png">
-                <span></span>
-                <div><a href="project.html">P</a>
-                    <p>roject</p>
-                </div>
+                <footer>
+                    <!--                    <h1>YEON WOO</h1>-->
+                    <div class="footC">
+                        <p>010-2223-0629</p>
+                        <p>dusdn1401@naver.com</p>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
+    
 
-       
-     <script>
+    <script>
         $(function() {
-            // var mLogo = document.querySelector('.logo')
-            // var mImg = document.querySelector(".img");
-            // var mScroll = document.querySelector(".scroll");
-            // var mRound = document.querySelector(".round");
-            // $(window).scroll(function(){
+            function scrollFooter(scrollY, heightFooter) {
+                console.log(scrollY);
+                console.log(heightFooter);
 
-            //     var scroll = $(this).scrollTop();
-            //    var pinkScroll = scroll/2
-            //    var yellowScroll = scroll*1
+                if (scrollY >= heightFooter) {
+                    $('footer').css({
+                        'bottom': '0px'
+                    });
+                } else {
+                    $('footer').css({
+                        'bottom': '-' + heightFooter + 'px'
+                    });
+                }
+            }
 
-            //    console.log(pinkScroll);
-            //    //console.log(pinkScroll);
-               
-            //    $('.logo').css({'transform' : 'translate3d(0,'+ pinkScroll +'px,0)'})
-            // //    $('.logo').css({'width' : pinkScroll +'px'})
-            //    $('.img').css({'height' : '-' + yellowScroll +'px'})
 
-            //====================================
-                // var po =  window.pageYOffset;
-                // var value = window.pageYOffset / mImg.offsetTop+1;
+            var windowHeight = $(window).height(),
+                footerHeight = $('footer').height(),
+                heightDocument = (windowHeight) + ($('.content').height()) + ($('footer').height()) - 20;
 
-        
-                // // mImg.style.transform = `scale(${value})`;
-
-                // mLogo.style.width = `${value}`;
-
-                // //  mLogo.style.transform = 'scale(0.3)';
-                // if(value > 2 ){
-                //     mLogo.style.top = `-10%`;
-                // }else{
-                //     mLogo.style.top = `0%`;
-                // }
-                
-
+            // Definindo o tamanho do elemento pra animar
+            $('.main, .scroll').css({
+                'height': heightDocument + 'px'
             });
 
+            // Definindo o tamanho dos elementos header e conteúdo
+            $('header').css({
+                'height': windowHeight + 'px',
+                'line-height': windowHeight + 'px'
+            });
+
+            $('.all').css({
+                'margin-top': windowHeight + 'px'
+            });
+
+            scrollFooter(window.scrollY, footerHeight);
+
+            // ao dar rolagem
+            window.onscroll = function() {
+                var scroll = window.scrollY;
+
+                $('.scroll').css({
+                    'top': '-' + scroll + 'px'
+                });
+
+                $('header').css({
+                    'background-position-y': 50 - (scroll * 100 / heightDocument) + '%'
+                });
+
+                scrollFooter(scroll, footerHeight);
+            }
+
         })
-
-
-    </script> 
+    </script>
 </body></html>

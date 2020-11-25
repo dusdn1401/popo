@@ -123,6 +123,12 @@ body {
   transition: 1.5s;
 }
 
+@media (max-width: 1300px) {
+  .about {
+    width: 70%;
+  }
+}
+
 @media (max-width: 1080px) {
   .menu nav.active {
     width: 100%;
@@ -130,14 +136,16 @@ body {
   .about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 auto 150px;
+    margin: 0 auto;
   }
   .about .me {
     float: none;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
   .about .info {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto 50px;
   }
 }
 

@@ -119,6 +119,8 @@ body {
         }
     }
 }
+@media (max-width: 1300px){
+    .about{width: 70%;}}
 
 @media (max-width: 1080px){
     .menu{
@@ -127,9 +129,12 @@ body {
     
     .about{
         flex-wrap: wrap;
-        margin: 0 auto 150px;
-        .me{float: none; width: 100%;} 
-        .info{width: 100%;}
+        margin: 0 auto;
+        .me{
+        float: none; width: 70%;
+    margin: 0 auto;} 
+        .info{width: 80%;
+        margin: 0 auto 50px;}
     }
 
  }

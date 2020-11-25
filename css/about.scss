@@ -12,19 +12,19 @@ body {
 
 .left {
     position: fixed;
-    top: 250px;
-    left: 10.5vw;
+    top: 195px;
+    left: 10.3vw;
     transition: .5s;
     transform: rotate(-90deg) translate(-80%, -50%);
     transform-origin: 0% 0%;
 
     p {
         font-size: 30px;
-        width: 500px;
+        width: 400px;
     }
 
     p:after {
-        width: 70%;
+        width: 60%;
         height: 1px;
         content: '';
         clear: both;

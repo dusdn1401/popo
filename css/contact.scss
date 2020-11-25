@@ -13,18 +13,18 @@ body {
 .left {
     position: fixed;
     top: 250px;
-    left: 10.5vw;
+    left: 10.3vw;
     transition: .5s;
     transform: rotate(-90deg) translate(-80%, -50%);
     transform-origin: 0% 0%;
 
     p {
         font-size: 30px;
-        width: 550px;
+        width: 400px;
     }
 
     p:after {
-        width: 65%;
+        width: 60%;
         height: 1px;
         content: '';
         clear: both;

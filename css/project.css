@@ -743,6 +743,33 @@ body {
 
 /* =============================== */
 
-@media (max-width: 1080px) {}
+@media (max-width: 1080px) {
+    .dt_main .dt_m2 figure {
+        width: 90%;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .dt_main .dt_m2 figure:nth-of-type(1){border-top: 1px solid #ff6565}
+    .dt_main .dt_m2 figure h3 {
+        width: 100%;
+        margin: 30px auto 50px;
+        text-align: center;
+        font-size: 20px;
+        
+    }
+    
+    .dt_main .dt_m2 figure figcaption {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        white-space: pre-line;
+    }
+}
 @media (max-width: 768px) {}
 @media (max-width: 480px) {}

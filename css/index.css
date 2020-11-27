@@ -191,16 +191,16 @@ header {
         transform: translate(-50%);
     }
     20% {
-        transform: translate(-50%, 50px);
+        transform: translate(-50%, 10px);
     }
     40% {
-        transform: translate(-55%, -52px);
+        transform: translate(-55%, -10px);
     }
     60% {
-        transform: translate(-45%, 55px);
+        transform: translate(-45%, 10px);
     }
     80% {
-        transform: translate(-40%, -55px);
+        transform: translate(-40%, -10px);
     }
     100% {
         transform: translate(-50%);

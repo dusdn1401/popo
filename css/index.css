@@ -481,3 +481,13 @@ footer,
     footer .footC{width:80%;}
     footer .footC p{white-space: pre-line; width: 100%;} 
 }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 100px;
+    }
+    .content .con img {height: 40%; width: 50%;bottom: 20%;}
+}
+
+@media (max-width: 480px) {
+    h1 {font-size: 60px;}
+}

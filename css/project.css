@@ -535,6 +535,7 @@ body {
     height: 100%;
 }
 .dt_main{width: 100%; height: 100%; text-align: center; padding:50px 0;}
+.dt_main > img{width: 50%; height:100%;}
 .dt_main .dt_m1 p{font-size: 20px;}
 .dt_main .dt_m1 p a {color: white; display: block; margin: 40px auto; border: 1px solid white; width: 30%;}
 .dt_main .dt_m2 figure{ 
@@ -744,6 +745,7 @@ body {
 /* =============================== */
 
 @media (max-width: 1080px) {
+    .dt_main > img{width: 90%; height:100%;}
     .dt_main .dt_m2 figure {
         width: 90%;
         text-align: center;
@@ -771,5 +773,9 @@ body {
         white-space: pre-line;
     }
 }
-@media (max-width: 768px) {}
-@media (max-width: 480px) {}
+@media (max-width: 768px) {
+    .dt_main > img{width: 90%; height:50%;}
+}
+@media (max-width: 480px) {
+    .dt_main > img{width: 90%; height:50%;}
+}

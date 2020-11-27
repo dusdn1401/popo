@@ -170,15 +170,16 @@ header {
 }
 
 .content .con img {
-    width: 500px;
-    height: 500px;
+    width: 30%;
+    height:50%;
     margin: 0 auto;
     position: absolute;
     border-radius: 50%;
-    left: 38%;
-    bottom: 17%;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%);
     opacity: 0.8;
-    animation: watch 1s linear infinite both;
+    animation: watch 2s linear infinite both;
 }
 
 .content .con img:hover {
@@ -187,22 +188,22 @@ header {
 
 @keyframes watch {
     0% {
-        transform: translate(0);
+        transform: translate(-50%);
     }
     20% {
-        transform: translate(-5px, 5px);
+        transform: translate(-50%, 50px);
     }
     40% {
-        transform: translate(-5px, -5px);
+        transform: translate(-55%, -52px);
     }
     60% {
-        transform: translate(5px, 5px);
+        transform: translate(-45%, 55px);
     }
     80% {
-        transform: translate(5px, -5px);
+        transform: translate(-40%, -55px);
     }
     100% {
-        transform: translate(0);
+        transform: translate(-50%);
     }
 }
 

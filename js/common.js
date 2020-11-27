@@ -4,6 +4,7 @@ $(function(){
 		$('.menu').toggleClass('expanded');
 		$('span').toggleClass('hidden');
 		$('.icon-menu , .icon').toggleClass('close');
+        
 	});
 
 

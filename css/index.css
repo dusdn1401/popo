@@ -469,3 +469,15 @@ footer,
         color: #fff;
     }
 }
+
+/* ========================================= */
+@media (max-width: 1080px) {
+    .content .con {
+        width: 80%;
+    }
+    .content .con .ctext{width: 100%;}
+    .content .con .ctext p{width: 100%; text-align: center;}
+    .content .con img {animation: none; width: 40%;}
+    footer .footC{width:80%;}
+    footer .footC p{white-space: pre-line; width: 100%;} 
+}

@@ -741,3 +741,8 @@ body {
 } */
 
 
+/* =============================== */
+
+@media (max-width: 1080px) {}
+@media (max-width: 768px) {}
+@media (max-width: 480px) {}

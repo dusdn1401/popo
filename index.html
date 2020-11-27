@@ -28,7 +28,8 @@
                             <p>UI/UX DESIGNER & WEB PUBLISHER PORTFOLIO </p>
                         </div> <img src="img/about.jpg" onclick="effect(effect_box,50);">
                         <div id="box" class="text-effect">
-                        <p>1996.06.29 </p><p>dusdn1401@naver.com</p>
+                        <p>1996.06.29 </p>
+                        <p>dusdn1401@naver.com</p>
                          </div>
                     </div>
                 </section>
@@ -38,7 +39,7 @@
                     </div> <span class="hidden"><a href="index.html">Home </a></span> <span class="hidden"><a href="about.html">ABOUT</a></span> <span class="hidden"><a href="project.html">PROJECT</a></span> <span class="hidden"><a href="contact.html">CONTACT</a></span> </div>
                 <footer>
                     <div class="footC">
-                        <!--                        <p>"You only get out of life what you put into it." </p>-->
+                        
                         <p>
                         <strong>CHARACTOR</strong> 
                         
@@ -66,18 +67,18 @@
         var effect_box = document.getElementsByClassName('text-effect');
         // 효과 함수
         function effect(object, speed) {
-            // 해당 객체안에 들어가있는 모든 텍스트갯수를 불러옵니다.
+            // 해당 객체안에 들어가있는 모든 텍스트갯수
             var object_len = object.item(0).innerText.length;
-            // 해당 객체안에 들어가있는 모든 텍스트를 변수에 할당합니다.
+            // 해당 객체안에 들어가있는 모든 텍스트를 변수에 할당
             var object_text = object.item(0).innerText;
-            // 기존에 있는 text모두 제거
+            // 기존에 있는 text제거
             object.item(0).innerHTML = '';
             for (var i = 0; i <= object_len; i++) {
-                // 텍스트를 감싸줄 'p' 태그를 생성합니다.
+                // 텍스트를 감싸줄 'p' 태그를 생성
                 n_tag = document.createElement("p");
-                // 해당 div에 감싸줄 'p' 태그를 추가합니다.
+                // 해당 div에 감싸줄 'p' 태그를 추가
                 object.item(0).append(n_tag);
-                // 넣은 'p' 태그 안에 텍스트를 추가합니다.
+                // 넣은 'p' 태그 안에 텍스트를 추가
                 n_tag.append(object_text.charAt(i))
                 if (i >= object_len) {
                     var anima = true;

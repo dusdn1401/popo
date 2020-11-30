@@ -12,7 +12,7 @@ body {
 
 .left {
     position: fixed;
-    top: 195px;
+    top: 250px;
     left: 10.3vw;
     transition: .5s;
     transform: rotate(-90deg) translate(-80%, -50%);
@@ -20,11 +20,11 @@ body {
 
     p {
         font-size: 30px;
-        width: 400px;
+        width: 500px;
     }
 
     p:after {
-        width: 60%;
+        width: 50%;
         height: 1px;
         content: '';
         clear: both;

@@ -9,7 +9,7 @@ body {
     
 }
 // =======================================
-
+// .logo a{font-family: Arial, Helvetica, sans-serif; font-size: 100px;}
 .left {
     position: fixed;
     top: 250px;
@@ -20,11 +20,11 @@ body {
 
     p {
         font-size: 30px;
-        width: 400px;
+        width: 500px;
     }
 
     p:after {
-        width: 60%;
+        width: 50%;
         height: 1px;
         content: '';
         clear: both;

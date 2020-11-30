@@ -9,7 +9,7 @@ body {
 
 .left {
   position: fixed;
-  top: 195px;
+  top: 250px;
   left: 10.3vw;
   -webkit-transition: .5s;
   transition: .5s;
@@ -21,11 +21,11 @@ body {
 
 .left p {
   font-size: 30px;
-  width: 400px;
+  width: 500px;
 }
 
 .left p:after {
-  width: 60%;
+  width: 50%;
   height: 1px;
   content: '';
   clear: both;

@@ -1,11 +1,4 @@
-
-
 $(function () {
-
-
-
-
-
 
       var square = document.querySelector('.square');
       var pop = document.querySelector('.pop');
@@ -14,29 +7,26 @@ $(function () {
         pop.classList.toggle('active');
       })
 
-
-
-
-      var $cont = document.querySelector('.cont');
-      var $elsArr = [].slice.call(document.querySelectorAll('.el'));
-      var $closeBtnsArr = [].slice.call(document.querySelectorAll('.closeBtn'));
+      var cont = document.querySelector('.cont');
+      var elsArr = document.querySelectorAll('.el');
+      var closeBtnsArr =document.querySelectorAll('.closeBtn');
 
       setTimeout(function () {
-        $cont.classList.remove('s--inactive');
+        cont.classList.remove('s--inactive');
       }, 200);
 
-      $elsArr.forEach(function ($el) {
-        $el.addEventListener('click', function () {
+      elsArr.forEach(function (el) {
+        el.addEventListener('click', function () {
           if (this.classList.contains('s--active')) return;
-          $cont.classList.add('s--el-active');
+          cont.classList.add('s--el-active');
           this.classList.add('s--active');
         });
       });
 
-      $closeBtnsArr.forEach(function ($btn) {
-        $btn.addEventListener('click', function (e) {
+      closeBtnsArr.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
           e.stopPropagation();
-          $cont.classList.remove('s--el-active');
+          cont.classList.remove('s--el-active');
           document.querySelector('.el.s--active').classList.remove('s--active');
         });
       });

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO_YEONWOO</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/fa.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="js/common.js"></script> -->
+    <script src="js/index.js"></script>
+    
+</head>
+
+<body>
+    <div class="main">
+        <div class="scroll">
+            <div class="all">
+                <div class="header">
+                    <h1>PORTFOLIO</h1>
+                    <div class="mouse">
+                        <p>scroll</p>
+                    </div>
+                </div>
+                <section class="content">
+                    <div class="con">
+                        <div class="ctext">
+                            <h3>HELLO <br> I'M YEONWOO SHIN.</h3>
+                            <p>UI/UX DESIGNER & WEB PUBLISHER PORTFOLIO </p>
+                        </div> 
+                        <img src="img/about.jpg" onclick="effect(effect_box,50);">
+                        <div id="box" class="text-effect">
+                        <p>1996.06.29 </p>
+                        <p>dusdn1401@naver.com</p>
+                         </div>
+                    </div>
+                </section>
+                <div class="menu">
+                    <div class="icon-menu">
+                        <div class="icon"></div>
+                    </div> <span class="hidden"><a href="index.html">Home </a></span> <span class="hidden"><a href="about.html">ABOUT</a></span> <span class="hidden"><a href="project.html">PROJECT</a></span> <span class="hidden"><a href="contact.html">CONTACT</a></span> </div>
+                <footer>
+                    <div class="footC">
+                        
+                        <p>
+                        <strong>CHARACTOR</strong> 
+                        
+                        #섬세한 성격 
+                        #책임감 
+                        #소통</p>
+                        <p>
+                        <strong>STRENGTH</strong> 
+                        
+                        #끈기 
+                        #뛰어한 습득력 
+                        #긍적에너지</p>
+                        <p>
+                        <strong>VALUE</strong> 
+                        
+                        #솔직 
+                        #자신감 
+                        #창의력</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        var effect_box = document.getElementsByClassName('text-effect');
+        // 효과 함수
+        function effect(object, speed) {
+            // 해당 객체안에 들어가있는 모든 텍스트갯수
+            var object_len = object.item(0).innerText.length;
+            // 해당 객체안에 들어가있는 모든 텍스트를 변수에 할당
+            var object_text = object.item(0).innerText;
+            // 기존에 있는 text제거
+            object.item(0).innerHTML = '';
+            for (var i = 0; i <= object_len; i++) {
+                // 텍스트를 감싸줄 'p' 태그를 생성
+                n_tag = document.createElement("p");
+                // 해당 div에 감싸줄 'p' 태그를 추가
+                object.item(0).append(n_tag);
+                // 넣은 'p' 태그 안에 텍스트를 추가
+                n_tag.append(object_text.charAt(i))
+                if (i >= object_len) {
+                    var anima = true;
+                }
+            }
+            if (anima === true) {
+                var turn = 0;
+                var opacity_txt = setInterval(function () {
+                    document.querySelectorAll('p').item(turn).style.opacity = '1';
+                    turn++;
+                    // object_len 갯수와 turn 갯수가 동일해지면 작동 중지
+                    if (object_len === turn) {
+                        clearInterval(opacity_txt);
+                    }
+                }, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-$(function(){
+function common(){
 	
 	$('.icon-menu').on('click', function() {
 		$('.menu').toggleClass('expanded');
@@ -25,4 +25,8 @@ $(function(){
 	// 	}
 	// },true)
 
-});
+	console.log('export');
+
+};
+
+export default common;

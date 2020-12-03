@@ -1,4 +1,4 @@
-$(function () {
+function project() {
 
       var square = document.querySelector('.square');
       var pop = document.querySelector('.pop');
@@ -47,4 +47,5 @@ $(function () {
     
 
 
-    });
+    };
+export default project;

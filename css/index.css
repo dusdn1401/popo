@@ -7,7 +7,7 @@ body {
     justify-content: center;
     font-family: Helvetica;
 }
-
+.menu{display: flex;}
 .main {
     overflow: hidden;
 }

@@ -25,12 +25,31 @@ a {
           box-sizing: border-box;
 }
 
-/* ============================= */
-.menu {
-  position: fixed;
+.lo {
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 15px;
+  position: absolute;
+  top: 2%;
+  left: 9%;
+}
+
+.lo a {
+  color: white;
+}
+
+.lo a:hover {
+  color: #ed354c;
+}
+
+/* ============================= */
+.menu {
+  position: fixed;
+  display: none;
   top: 50px;
   left: 9.5vw;
   -webkit-box-orient: horizontal;
@@ -221,10 +240,11 @@ a {
 }
 
 .logo {
-  width: 200px;
+  width: 100%;
+  text-align: center;
   margin: 35px auto 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 35px;
 }
 
 .logo a {
@@ -235,5 +255,16 @@ a {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .lo {
+    display: none;
+  }
 }
 /*# sourceMappingURL=common.css.map */

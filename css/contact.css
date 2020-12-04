@@ -9,7 +9,7 @@ body {
 
 .left {
   position: fixed;
-  top: 250px;
+  top: 25vh;
   left: 10.3vw;
   -webkit-transition: .5s;
   transition: .5s;
@@ -36,8 +36,8 @@ body {
 }
 
 .main {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 80%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,11 +57,12 @@ body {
 }
 
 .main .m1 h2 {
-  font-size: 60px;
+  font-size: 55px;
+  padding-bottom: 15px;
 }
 
 .main .m1 p {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .main span {
@@ -72,13 +73,13 @@ body {
   background: white;
   opacity: 0.2;
   display: inline-block;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .main .m2 {
   width: 100%;
-  font-size: 30px;
-  margin: 35% 0 0 50px;
+  font-size: 25px;
+  margin: 25% 0 0 50px;
 }
 
 .main .m2 p {
@@ -95,6 +96,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .left {
+    display: none;
+  }
   .main {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -104,11 +108,11 @@ body {
   .main span {
     width: 400px;
     height: 2px;
-    margin: 80px auto;
+    margin: 50px auto;
   }
   .main .m1 {
-    width: 80%;
-    text-align: right;
+    width: 100%;
+    text-align: center;
     margin: 100px 0px 0 0;
   }
   .main .m1 h2 {
@@ -118,10 +122,10 @@ body {
     font-size: 25px;
   }
   .main .m2 {
-    width: 60%;
+    width: 100%;
     font-size: 25px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
   }
 }
 
